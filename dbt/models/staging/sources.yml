@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: augmedix_raw
+    database: augmedix-healthcare
+    schema: augmedix
+    description: >
+      Raw layer tables, loaded outside dbt via bq load from DAX Studio
+      CSV exports (pre_process files). dbt only reads from these as
+      sources -- it does not create or manage raw tables.
+    tables:
+      - name: raw_claims
+      - name: raw_diagnoses
+      - name: raw_dim_cpt
+      - name: raw_dim_drug
+      - name: raw_dim_formulary_tier
+      - name: raw_dim_frequency
+      - name: raw_dim_icd10
+      - name: raw_dim_indication
+      - name: raw_dim_insurance
+      - name: raw_dim_lab_test
+      - name: raw_dim_pharmacy
+      - name: raw_dim_route
+      - name: raw_encounters
+      - name: raw_lab_results
+      - name: raw_medications
+      - name: raw_patients
+      - name: raw_providers
+      - name: raw_vital_signs

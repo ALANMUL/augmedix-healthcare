@@ -1,0 +1,112 @@
+version: 2
+
+models:
+  - name: stg_claims
+    columns:
+      - name: claim_id
+        tests: [unique, not_null]
+      - name: patient_id
+        tests:
+          - relationships:
+              to: ref('stg_patients')
+              field: patient_id
+      - name: encounter_id
+        tests:
+          - relationships:
+              to: ref('stg_encounters')
+              field: encounter_id
+
+  - name: stg_diagnoses
+    columns:
+      - name: diagnosis_id
+        tests: [unique, not_null]
+      - name: encounter_id
+        tests:
+          - relationships:
+              to: ref('stg_encounters')
+              field: encounter_id
+
+  - name: stg_encounters
+    columns:
+      - name: encounter_id
+        tests: [unique, not_null]
+      - name: patient_id
+        tests:
+          - relationships:
+              to: ref('stg_patients')
+              field: patient_id
+
+  - name: stg_lab_results
+    columns:
+      - name: lab_result_id
+        tests: [unique, not_null]
+
+  - name: stg_medications
+    columns:
+      - name: medication_id
+        tests: [unique, not_null]
+
+  - name: stg_patients
+    columns:
+      - name: patient_id
+        tests: [unique, not_null]
+
+  - name: stg_providers
+    columns:
+      - name: provider_id
+        tests: [unique, not_null]
+
+  - name: stg_vital_signs
+    columns:
+      - name: vital_id
+        tests: [unique, not_null]
+
+  - name: stg_dim_cpt
+    columns:
+      - name: cpt_id
+        tests: [unique, not_null]
+
+  - name: stg_dim_drug
+    columns:
+      - name: drug_id
+        tests: [unique, not_null]
+
+  - name: stg_dim_formulary_tier
+    columns:
+      - name: tier_id
+        tests: [unique, not_null]
+
+  - name: stg_dim_frequency
+    columns:
+      - name: frequency_id
+        tests: [unique, not_null]
+
+  - name: stg_dim_icd10
+    columns:
+      - name: icd10_id
+        tests: [unique, not_null]
+
+  - name: stg_dim_indication
+    columns:
+      - name: indication_id
+        tests: [unique, not_null]
+
+  - name: stg_dim_insurance
+    columns:
+      - name: insurance_name_id
+        tests: [unique, not_null]
+
+  - name: stg_dim_lab_test
+    columns:
+      - name: lab_test_id
+        tests: [unique, not_null]
+
+  - name: stg_dim_pharmacy
+    columns:
+      - name: pharmacy_id
+        tests: [unique, not_null]
+
+  - name: stg_dim_route
+    columns:
+      - name: route_id
+        tests: [unique, not_null]

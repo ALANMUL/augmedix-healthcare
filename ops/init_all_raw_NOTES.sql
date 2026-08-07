@@ -1,0 +1,31 @@
+-- =====================================================================
+-- INIT ALL RAW TABLES — run once after drop_raw_tables.sql
+-- Paste this whole file into BigQuery Console query editor
+-- (or run each sql/raw/*.sql file individually)
+-- =====================================================================
+
+-- Run each file from sql/raw/ in this order (no dependencies between
+-- raw tables, order doesn't matter, listed alphabetically):
+
+-- sql/raw/claims_raw.sql
+-- sql/raw/diagnoses_raw.sql
+-- sql/raw/dim_cpt_raw.sql
+-- sql/raw/dim_drug_raw.sql
+-- sql/raw/dim_formulary_tier_raw.sql
+-- sql/raw/dim_frequency_raw.sql
+-- sql/raw/dim_icd10_raw.sql
+-- sql/raw/dim_indication_raw.sql
+-- sql/raw/dim_insurance_raw.sql
+-- sql/raw/dim_lab_test_raw.sql
+-- sql/raw/dim_pharmacy_raw.sql
+-- sql/raw/dim_route_raw.sql
+-- sql/raw/encounters_raw.sql
+-- sql/raw/lab_results_raw.sql
+-- sql/raw/medications_raw.sql
+-- sql/raw/patients_raw.sql
+-- sql/raw/providers_raw.sql
+-- sql/raw/vital_signs_raw.sql
+
+-- BigQuery doesn't support multi-statement paste-and-run reliably for
+-- CREATE TABLE across 18 files in the web console -- paste one at a
+-- time, or use the bq CLI script below instead.

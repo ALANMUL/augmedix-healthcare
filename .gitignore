@@ -1,0 +1,17 @@
+# dbt
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+
+# credentials -- never commit
+profiles.yml
+*.json
+!dbt/models/**/*.json
+
+# source data -- large/PHI-adjacent synthetic exports, keep local only
+data/pre_process/*.csv
+data/post_process/*.csv
+
+# OS
+.DS_Store
+Thumbs.db
