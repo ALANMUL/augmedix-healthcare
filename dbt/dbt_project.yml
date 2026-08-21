@@ -19,7 +19,6 @@ models:
   augmedix_healthcare:
     staging:
       +materialized: table
-      +schema: augmedix
     marts:
       +materialized: table
-      +schema: augmedix
+
