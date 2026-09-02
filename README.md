@@ -11,8 +11,13 @@ Project: `augmedix-healthcare`  ·  Dataset: `augmedix`
 GitHub: https://github.com/ALANMUL/augmedix-healthcare
 
 ---
+## Preview
 
+![Executive Summary](docs/Executive%20Summary.jpg)
 
+![RCM Overview](docs/RCM%20Overview.jpg)
+
+------------
 
 ## Architecture
 
