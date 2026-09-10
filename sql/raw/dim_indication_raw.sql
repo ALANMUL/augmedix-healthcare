@@ -6,13 +6,13 @@
 
 CREATE TABLE IF NOT EXISTS `augmedix-healthcare.augmedix.raw_dim_indication` (
   indication_id         STRING,
-  indication_raw          STRING,
-  indication_label           STRING,
-  clinical_category              STRING,
-  is_chronic                        STRING,
-  is_acute                            STRING,
-  body_system                            STRING,
-  icd10_category                             STRING
+  indication_raw        STRING,
+  indication_label      STRING,
+  clinical_category     STRING,
+  is_chronic            STRING,
+  is_acute              STRING,
+  body_system           STRING,
+  icd10_category        STRING
 );
 
 -- Load pattern (bq CLI):
