@@ -40,10 +40,6 @@ dbt/
 └── snapshots/                (empty — no SCD tracking needed yet)
 ```
 
-No `intermediate/` layer — none of the 18 tables need cross-fact joins before
-reaching mart shape. No `marts/reporting/` — Power BI's DAX layer owns
-aggregation; adding pre-aggregated reporting tables here would just duplicate
-that logic in two places.
 
 ## Setup
 
