@@ -6,8 +6,8 @@
 
 CREATE TABLE IF NOT EXISTS `augmedix-healthcare.augmedix.raw_dim_icd10` (
   icd10_id       INT64,
-  icd10_code      STRING,
-  description        STRING
+  icd10_code     STRING,
+  description    STRING
 );
 
 -- Load pattern (bq CLI):
