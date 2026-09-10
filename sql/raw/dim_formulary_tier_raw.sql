@@ -6,13 +6,13 @@
 
 CREATE TABLE IF NOT EXISTS `augmedix-healthcare.augmedix.raw_dim_formulary_tier` (
   tier_id                STRING,
-  formulary_tier           STRING,
-  tier_label                STRING,
-  cost_level                  STRING,
-  requires_prior_auth           STRING,
-  mail_order_eligible              STRING,
-  patient_cost_share                  STRING,
-  description                            STRING
+  formulary_tier         STRING,
+  tier_label             STRING,
+  cost_level             STRING,
+  requires_prior_auth    STRING,
+  mail_order_eligible    STRING,
+  patient_cost_share     STRING,
+  description            STRING
 );
 
 -- Load pattern (bq CLI):
