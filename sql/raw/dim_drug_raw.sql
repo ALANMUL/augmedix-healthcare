@@ -5,15 +5,15 @@
 -- =====================================================================
 
 CREATE TABLE IF NOT EXISTS `augmedix-healthcare.augmedix.raw_dim_drug` (
-  drug_id                STRING,
+  drug_id                 STRING,
   drug_name               STRING,
-  drug_class               STRING,
-  therapeutic_area          STRING,
-  controlled_substance       STRING,
-  high_alert_med             STRING,
-  requires_monitoring         STRING,
-  standard_dose               STRING,
-  route_category               STRING
+  drug_class              STRING,
+  therapeutic_area        STRING,
+  controlled_substance    STRING,
+  high_alert_med          STRING,
+  requires_monitoring     STRING,
+  standard_dose           STRING,
+  route_category          STRING
 );
 
 -- Load pattern (bq CLI):
