@@ -6,14 +6,14 @@
 
 CREATE TABLE IF NOT EXISTS `augmedix-healthcare.augmedix.raw_dim_route` (
   route_id                STRING,
-  route_raw                  STRING,
-  route_label                   STRING,
-  route_category                   STRING,
-  is_injectable                       STRING,
-  is_oral                                STRING,
-  is_inhaled                                STRING,
-  administration_setting                       STRING,
-  description                                     STRING
+  route_raw               STRING,
+  route_label             STRING,
+  route_category          STRING,
+  is_injectable           STRING,
+  is_oral                 STRING,
+  is_inhaled              STRING,
+  administration_setting  STRING,
+  description             STRING
 );
 
 -- Load pattern (bq CLI):
