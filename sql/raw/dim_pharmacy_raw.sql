@@ -9,13 +9,13 @@
 
 CREATE TABLE IF NOT EXISTS `augmedix-healthcare.augmedix.raw_dim_pharmacy` (
   pharmacy_id          STRING,
-  pharmacy_name           STRING,
-  pharmacy_type              STRING,
-  is_mail_order                  STRING,
-  is_retail                         STRING,
-  is_pbm                               STRING,
-  parent_company                          STRING,
-  description                                STRING
+  pharmacy_name        STRING,
+  pharmacy_type        STRING,
+  is_mail_order        STRING,
+  is_retail            STRING,
+  is_pbm               STRING,
+  parent_company       STRING,
+  description          STRING
 );
 
 -- Load pattern (bq CLI):
