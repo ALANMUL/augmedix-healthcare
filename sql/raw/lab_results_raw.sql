@@ -6,19 +6,19 @@
 
 CREATE TABLE IF NOT EXISTS `augmedix-healthcare.augmedix.raw_lab_results` (
   lab_result_id            STRING,
-  encounter_id               STRING,
-  result_value                  FLOAT64,
-  reference_range                  STRING,
-  abnormal_flag                       STRING,
-  collection_date                        STRING,   -- cast in staging
-  result_date                               STRING,   -- cast in staging
-  ordering_provider_id                         STRING,
-  lab_status                                      STRING,
-  specimen_type                                      STRING,
-  lab_test_id                                           STRING,
-  patient_id                                               STRING,
-  unit                                                        STRING,
-  loinc_code                                                     STRING
+  encounter_id             STRING,
+  result_value             FLOAT64,
+  reference_range          STRING,
+  abnormal_flag            STRING,
+  collection_date          STRING,   -- cast in staging
+  result_date              STRING,   -- cast in staging
+  ordering_provider_id     STRING,
+  lab_status               STRING,
+  specimen_type            STRING,
+  lab_test_id              STRING,
+  patient_id               STRING,
+  unit                     STRING,
+  loinc_code               STRING
 );
 
 -- Load pattern (bq CLI):
