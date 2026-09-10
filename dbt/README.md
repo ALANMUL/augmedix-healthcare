@@ -19,27 +19,31 @@ source → staging → mart).
 
 ## Structure
 
-```
 dbt/
 ├── dbt_project.yml
 ├── packages.yml              dbt_utils
 ├── models/
 │   ├── staging/
-│   │   ├── sources.yml       declares the 18 raw_* tables
-│   │   ├── schema.yml        unique/not_null/relationships tests
-│   │   └── stg_*.sql         18 models — type casts, null cleanup only
+│   │   ├── sources.yml        declares the 18 raw_* tables
+│   │   ├── schema.yml         unique/not_null/relationships tests
+│   │   └── stg_*.sql          18 models — type casts, null cleanup only
+│   ├── intermediate/
+│   │   ├── int_claims_joined.sql
+│   │   ├── int_dim_cpt_deduped.sql
+│   │   ├── int_encounters_joined.sql
+│   │   ├── int_lab_results_joined.sql
+│   │   ├── int_medications_joined.sql
+│   │   └── int_patients_joined.sql
 │   └── marts/
-│       ├── finance/          claims (AR aging calc)
-│       ├── operations/       encounters (documentation method relabel)
-│       ├── clinical/         diagnoses (complexity bucket), lab_results, vital_signs
-│       ├── medication/       medications
-│       ├── population/       patients
-│       └── shared/           10 dimension tables + providers
-├── macros/                   (empty — no custom macros needed yet)
-├── seeds/                    (empty — no static CSV seeds needed)
-└── snapshots/                (empty — no SCD tracking needed yet)
-```
-
+│       ├── finance/           claims (AR aging calc)
+│       ├── operations/        encounters (documentation method relabel)
+│       ├── clinical/          diagnoses (complexity bucket), lab_results, vital_signs
+│       ├── medication/        medications
+│       ├── population/        patients
+│       └── shared/            10 dimension tables + providers
+├── macros/                    (empty — no custom macros needed yet)
+├── seeds/                     (empty — no static CSV seeds needed)
+└── snapshots/                 (empty — no SCD tracking needed yet)
 
 ## Setup
 
